@@ -1,0 +1,827 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+#main {
+  margin: 0;
+  text-align: center;
+}
+
+#top {
+  border: 0.1px solid transparent;
+  height: 710px;
+  background: url("images/Background Main.png") no-repeat;
+  background-size: cover;
+}
+
+header {
+  margin: 73px 250px 0 250px;
+}
+
+header figure {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.menu {
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin-left: 40px;
+}
+
+.menu-a {
+  font-size: 14px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat";
+  text-align: center;
+  padding: 5px 7px;
+  text-decoration: none;
+  display: block;
+}
+
+#min-menu {
+  display: none;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: flex; 
+  align-items: center;  
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: gold;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .8);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__item:hover {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.menu__item:active
+{
+  color: gold;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+#welcome {
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: rgb(255,255,255);
+  font-family: "Droid Serif";
+  font-style: italic;
+  margin: 205px 0 0 0;
+  padding: 0;
+}
+
+#home-title {
+  font-size: 75px;
+  letter-spacing: -2px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin: 50px 0 0 0;
+}
+
+#tell-more-a {
+  text-decoration: none;
+  display: table;
+  width: 240px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 3px;
+  background-color: #fdd135;
+}
+
+#tell-more-p {
+  font-size: 18px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#send-message {
+  width: 240px;
+  height: 65px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: #fdd135;
+  border: 1px solid #fdd135;
+  font-size: 18px;
+  color: rgb(255,255,255);
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+}
+
+#Services, #Portfolio, #Team, #About-us {
+  padding: 120px 0;
+}
+
+#partners {
+  padding: 55px 0;
+}
+
+#Contact {
+  padding: 110px 0;
+  background-color: #222222;
+  background-image: url("images/Map Image.png");
+  background-repeat: no-repeat;
+  background-position: 750px 130px;
+  background-size: 1800px 882px;
+}
+
+#Portfolio {
+  background-color: #f7f7f7;
+}
+
+#Team {
+  background-color: #f9f9f9;
+}
+
+.title {
+  color: #222222;
+  font-size: 40px;
+  letter-spacing: -1px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.contact {
+  color: #ffffff;
+}
+
+.sub-title, .sub-title-about {
+  font-size: 16px;
+  color: rgb(119,119,119);
+  font-family: "Droid Serif";
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.sub-title-about {
+  margin: 20px 0 80px 0;
+}
+
+.services-list {
+  display: inline-block;
+  width: auto;
+  max-width: 279px;
+  height: auto;
+  vertical-align: top;
+  margin: 80px 25px 0 25px;
+}
+
+.services-logo {
+  width: 66px;
+  height: 66px;
+  border-radius: 90px;
+  margin: 0;
+  display: block;
+  margin: 0 auto 25px auto;
+  border: 3px solid #fdd135;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-list-title, .portfolio-list-title {
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: #222222;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+}
+
+.team-list-title {
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #222222;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+.services-list-title {
+  margin: 0 0 20px 0;
+}
+
+.portfolio-list-title {
+  margin: 30px 0 0 0;
+}
+
+.services-list-description, .portfolio-list-description, .team-description {
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: rgb(119,119,119);
+  font-family: "Roboto Slab";
+  padding: 0px;
+  margin: 0;
+}
+
+.team-description {
+  width: auto;
+  max-width: 600px;
+  text-align: center;
+  margin: 50px auto auto auto;
+}
+
+.portfolio-list-description {
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.team-list-description {
+  margin: 10px 0 0 0;
+  color: #777777;
+}
+
+.portfolio-list {
+  display: inline-block;
+  width: auto;
+  max-width: 290px;
+  height: auto;
+  vertical-align: top;
+  margin: 80px 25px 0 25px;
+  background-color: #ffffff;
+}
+
+.team-list {
+  display: inline-block;
+  width: auto;
+  max-width: 221px;
+  height: auto;
+  vertical-align: top;
+  margin: 80px 25px 0 25px;
+}
+
+.portfolio-photo  {
+  width: auto;
+  height: auto;
+  max-width: 290px;
+  max-height: 304px;
+  margin: 0;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-photo {
+  width: auto;
+  height: auto;
+  max-width: 221px;
+  max-height: 221px;
+  border-radius: 90%;
+  border: 6px solid #ffffff;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.social-networks {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.about-list {
+  min-height: 180px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-list-photo {
+  width: 168px;
+  height: 168px;
+  border-radius: 90px;
+  margin: 0;
+  display: block;
+  border: 7px solid #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-beginnings, #about-battles, #about-dark-days, #about-triumph, #about-continues
+{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: 145%;
+  background-position: -20px 0;
+}
+
+#about-battles, #about-triumph {
+  float: right;
+}
+
+#about-continues {
+  margin: 0 auto;
+}
+
+.about-line
+{
+  width: 2px;
+  height: 80px;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+}
+
+.about-text-left {
+  float: left;
+  margin: 0;
+  width: 330px;
+  padding: 0 40px 0 0;
+}
+
+.about-text-right {
+  float: right;
+  margin: 0;
+  width: 330px;
+  padding: 0 0 0 40px;
+}
+
+.about-text-description-left, .about-text-description-right {
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: rgb(119,119,119);
+  font-family: "Roboto Slab";
+  margin: 0;
+  line-height: 120%;
+}
+
+.about-text-description-left
+{
+  text-align: right;
+  padding: 0 0 0 20px;
+}
+
+.about-text-description-right {
+  text-align: left;
+  padding: 0 20px 0 0;
+}
+
+.about-title-list, .about-title-list-right {
+  font-size: 18px;
+  letter-spacing: 0px;
+  color: rgb(34,34,34);
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+  padding: 0 0 17px 0;
+}
+
+.about-title-list-right {
+  text-align: left;
+}
+
+#about-beginnings {
+  background-image: url("images/Our Humble Beginnings.png");
+}
+
+#about-battles {
+  background-image: url("images/Facing Startup Battles.png");
+}
+
+#about-dark-days {
+  background-image: url("images/Enter The Dark Days.png");
+}
+
+#about-triumph {
+  background-image: url("images/Our Triumph.png");
+}
+
+#about-continues {
+  background-color: #fdd135;
+}
+
+#story-continues-text {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 150%;
+  color: rgb(255,255,255);
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+  text-align: center;
+  width: 107px;
+}
+
+.partners-list {
+  display: inline-block;
+  width: auto;
+  max-width: 290px;
+  height: auto;
+  vertical-align: middle;
+  margin: 5px 20px;
+}
+
+.partners-photo {
+  width: auto;
+  height: auto;
+  max-width: 290px;
+  max-height: 304px;
+  margin: 0;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-form {
+  max-width: 940px;
+  margin: 80px auto;
+}
+
+.net {
+  width: 41px;
+  height: 41px;
+  border-radius: 90px;
+  margin: 15px 2px 0 2px;
+  border: 3px solid #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.net:hover {
+  border-color: #686868;
+}
+
+#left-contact-form {
+  width: 50%;
+  float: left;
+  padding: 0;
+}
+
+#right-contact-form {
+  float: left;
+}
+
+.input {
+  width: 400px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  color: rgb(187,187,187);
+  font-family: "Montserrat";
+  font-weight: bold;
+  padding: 20px;
+  margin: 0 0 30px 0;
+}
+
+.textarea {
+  height: 175px;
+  resize: none;
+}
+
+footer {
+  display: inline-block;
+  overflow: auto;
+}
+
+.copyright {
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: rgb(85,85,85);
+  font-family: "Montserrat";
+  width: auto;
+  padding: 10px 0 10px 0;
+  float: left;
+}
+
+.design {
+  margin-right: 120px;
+}
+
+.prog {
+  margin-left: 120px;
+}
+
+.prog a {
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.prog a:hover {
+  text-decoration: underline;
+}
+
+.social-networks-footer {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+
+.net-footer {
+  width: 41px;
+  height: 41px;
+  border-radius: 90px;
+  margin: 20px 2px 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+}
+
+.net-footer:hover {
+  background-color: #686868;
+}
+
+@media screen and (max-width: 375px) {
+  .portfolio-list {
+    margin: 80px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #welcome {
+    font-size: 20px;
+    margin: 25px 0 0 0;
+  }
+
+  #home-title {
+    font-size: 45px;
+    margin: 50px 0 0 0;
+  }
+  
+  #top {
+    height: 500px;
+  }
+  
+  #tell-more-a {
+    width: 140px;
+    height: 35px;
+  }
+
+  #tell-more-p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  #top {
+    height: 600px;
+  }
+  
+  #welcome {
+    font-size: 20px;
+    margin: 55px 0 0 0;
+  }
+
+  #home-title {
+    font-size: 55px;
+    margin: 50px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .design {
+    width: 100%;
+    margin: 0;
+  }
+
+  .prog {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .social-networks-footer {
+    float: none;
+  }
+  
+  .net-footer {
+    margin: 0; 
+  }
+}
+
+@media screen and (min-width: 611px) and (max-width: 799px) {
+  .net-footer {
+    margin: 10px 2px 0 2px;
+  }
+  
+  .copyright {
+    font-size: 10px;
+  }
+  
+  .design {
+    margin-right: 5px;
+  }
+
+  .prog {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 880px) {
+  .design {
+    margin-right: 20px;
+  }
+
+  .prog {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 570px) {
+  .about-line {
+    display: none;
+  }
+  
+  .about-list {
+    height: auto;
+    margin: 40px 0;
+  }
+  
+  .about-title-list, .about-title-list-right {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-list-photo {
+    margin: 30px auto;
+    float: none;
+  }
+  
+  #about-battles, #about-triumph {
+    float: none;
+  }
+  
+  .about-text-left, .about-text-right {
+    margin: 0 auto;
+    padding: 0;
+    float: none;
+    width: 100%;
+  }
+  
+  .about-text-description-right, .about-text-description-left {
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  #left-contact-form, #right-contact-form {
+    width: 100%;
+  }
+  
+  .input {
+    width: 80%;
+  }
+  
+}
+
+@media screen and (min-width: 571px) and (max-width: 950px) {
+  .about-line {
+    display: none;
+  }
+  
+  .about-list {
+    margin: 80px 0;
+  }
+}
+
+@media screen and (min-width: 881px) and (max-width: 1010px) {
+  .design {
+    margin-right: 60px;
+  }
+
+  .prog {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .menu li {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  header {
+    display: none;
+  }
+  
+  #min-menu {
+    display: inline;
+  }
+}
